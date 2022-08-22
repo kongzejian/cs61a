@@ -1,12 +1,13 @@
 def count_stair_ways(n):
-    if n==1:
+    if n==0:
         return 1
-    elif n==0:
+    elif n<0:
         return 0
-    elif n==2:
-        return 2
     else:
-        return count_stair_ways(n-1)+count_stair_ways(n-2)
+        total=0
+        for i in range(1,3):
+            total+=count_stair_ways(n-i)
+    return total
       
       
 def count_k(n, k):
