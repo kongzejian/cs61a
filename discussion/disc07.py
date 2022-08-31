@@ -54,7 +54,7 @@ class Client:
         
  class Cat(Pet):
     def __init__(self,name,owner,lives=9):
-        Pet.__init__(name,owner)
+        Pet.__init__(self,name,owner)
         self.lives=lives
     def talk(self):
         print(self.name+' says meow! ')
